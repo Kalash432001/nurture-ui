@@ -53,7 +53,7 @@ import Invoice from "layouts/pages/account/invoice";
 import Security from "layouts/pages/account/security";
 import General from "layouts/pages/projects/general";
 import Timeline from "layouts/pages/projects/timeline";
-import Workflow from "layouts/pages/workFlow/src";
+// import Workflow from "layouts/pages/workFlow/src";
 import NewProject from "layouts/pages/projects/new-project";
 import Widgets from "layouts/pages/widgets";
 import Charts from "layouts/pages/charts";
@@ -96,6 +96,7 @@ import Error500 from "layouts/authentication/error/500";
 //Mumkin 
 
 import ChildRegistration from "child/child-registration";
+import WorkFlow from "workflow/workflow-management";
 
 // BalAsha - Nurture icons
 import Shop from "examples/Icons/Shop";
@@ -144,6 +145,20 @@ const routes = [
 
   },
 
+  { type: "collapse",
+    name: "Workflow Management",
+    key: "workflow",
+    icon: <BalAshaUser size="12px"/>,
+    collapse: [
+      {
+    name: "Workflow",
+    key: "workflow-management",
+    route: "/workflow/workflow-management",
+    component: <WorkFlow />,
+      },],
+
+  },
+
   { type: "divider", title: "Template Pages", key:  "template-pages"  },
   { type: "divider", title: "Template Pages", key:  "template-pages"  },
   { type: "divider", title: "Template Pages", key:  "template-pages"  },
@@ -161,12 +176,12 @@ const routes = [
         route: "/dashboards/default",
         component: <Default />,
       },
-      {
-        name: "Default",
-        key: "default",
-        route: "/dashboards/workflow",
-        component: <Workflow />,
-      },
+      // {
+      //   name: "Default",
+      //   key: "default",
+      //   route: "/dashboards/workflow",
+      //   component: <Workflow />,
+      // },
       {
         name: "Automotive",
         key: "automotive",
